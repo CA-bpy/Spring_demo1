@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--描述饮品需求-->
+    <bean id="demands" class="Spring_demo1.Drink.Demands">
+        <property name="species" value="乌龙奶绿"></property>
+        <property name="sugar" value="半塘"></property>
+        <property name="size" value="中杯"></property>
+    </bean>
+
+    <!--描述订单及奶茶店-->
+    <bean id="drinkMaker" class="Spring_demo1.Drink.DrinkMaker">
+        <property name="beverageShop" value="CoCo"></property>
+        <property name="demands" ref="demands"></property>
+    </bean>
+</beans>
